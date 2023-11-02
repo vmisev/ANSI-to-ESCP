@@ -1,15 +1,15 @@
 #--------------------------------------<>--------------------------------------#
-# ANSI Escape codes for formatting, equivalent to ESC/P2
-# List uses '\e' only for readability, feel free to swap it with '\033' or '\x1b'.
-# All '\' prefixed numbers are octal 3 digit.
-#
-# Work in progres, mistakse are guaranteid :D
+# ANSI Escape codes for formatting, equivalent to ESC/P2                       #
+# List uses '\e' only for readability, feel free to swap it with \033 or \x1b  #
+# All '\' prefixed numbers are octal 3 digit.                                  #
+#                                                                              #
+# Work in progres, mistakse are guaranteid :D                                  #
 #--------------------------------------<>--------------------------------------#
-# 
-# ANSI Bold, Dim, Italic, Underline, Inverse, Striketrough
+#                                                                              #
+# ANSI Bold, Dim, Italic, Underline, Inverse, Striketrough                     #
 #--------------------------------------::--------------------------------------#
 ansi_bold_o = \e[1m
-ansi_bold_c =\e[22m
+ansi_bold_c = \e[22m
 ansi_dim_o = \e[2m
 ansi_dim_c = \e[22m
 ansi_italic_o = \e[3m
@@ -27,8 +27,8 @@ ansi_hidden_c = \e[28m
 ansi_strike_o = \e[9m
 ansi_strike_c = \e[29m
 #--------------------------------------::--------------------------------------#
-#
-# ANSI 8 colors. We don't need BRIGHT.
+#                                                                              #
+# ANSI 8 colors. We don't need BRIGHT.                                         #
 #--------------------------------------::--------------------------------------#
 ansi_C0Black_Fg = \e[30
 ansi_C0Black_Bg = \e[40
@@ -49,24 +49,24 @@ ansi_C7White_Bg = \e[47
 ansi_CDefault_Fg = \e[39
 ansi_CDefault_Fg = \e[49
 #--------------------------------------::--------------------------------------#
-#
-# ANSI reset all previous attributes.
+#                                                                              #
+# ANSI reset all previous attributes.                                          #
 #--------------------------------------::--------------------------------------#
 ansi_Rs = \e[0m
 #
 #--------------------------------------<>--------------------------------------# 
 #</ansi>
-#
+#                                                                              
 #--------------------------------------<>--------------------------------------#
-#
-# ESC/P2 Escape codes for formatting, equivalent to ANSI.
-# List uses '\e' only for readability, feel free to swap it with '\033' or '\x1b'.
-# All '\' prefixed numbers are octal 3 digit.
+#                                                                              #
+# ESC/P2 Escape codes for formatting, equivalent to ANSI.                      #
+# List uses '\e' only for readability, feel free to swap it with \033 or \x1b  #
+# All '\' prefixed numbers are octal 3 digit.                                  #
 #--------------------------------------<>--------------------------------------#
-#
-# Bold, Dim (Outline+Shadow), Italic, Underline, ?Inverse?, Striketrough 
-# Dim (Outline+Shadow) should work with NLQ San Serif on 24/48 pin printers.
-# Not sure about 'escp_inverse', should work with ESC/POS; IDK about ESC/P2.
+#                                                                              #
+# Bold, Dim (Outline+Shadow), Italic, Underline, ?Inverse?, Striketrough       #
+# Dim (Outline+Shadow) should work with NLQ San Serif on 24/48 pin printers.   #
+# Not sure about 'escp_inverse', should work with ESC/POS; IDK about ESC/P2.   #
 #--------------------------------------::--------------------------------------#
 escp_bold_o = \eE
 escp_bold_c = \eF
@@ -85,8 +85,8 @@ escp_hidden_c =
 escp_strike_o = \e(-32
 escp_strike_c = \e(-30
 #--------------------------------------::--------------------------------------#
-#
-# ESC/P2 colors (VGA pallete). For real printer use just r(number_from_varName)
+#                                                                              #
+# ESC/P2 colors (VGA pallete). For real printer use just r(number_from_varName)#
 #--------------------------------------::--------------------------------------#
 escp_C0Black_Fg = \er\0170|\er\020
 escp_C0Black_Bg = \er\017|0\er\020
@@ -107,21 +107,21 @@ escp_C7White_Bg = \er\017|16777215\er\020
 escp_CDefault_Fg = \er\017\er\020
 escp_CDefault_Bg = \er\017\er\020
 #--------------------------------------::--------------------------------------#
-#
-# ESC/P2 initialize printer.
+#                                                                              #
+# ESC/P2 initialize printer.                                                   #
 #--------------------------------------::--------------------------------------#
 escp_Rs=\e@
 #
 #--------------------------------------<>--------------------------------------#
 #</escp>
-#
+#                                                                              
 #--------------------------------------<>--------------------------------------#
-# ANSI Escape codes for formatting, equivalent to ESC/P2.
-# List uses embedded control characters.
-#  |  ^[      |  ^]      |  ^O      |  ^P      |
+# ANSI Escape codes for formatting, equivalent to ESC/P2.                      #
+# List uses embedded control characters.                                       #
+#  |  ^[      |  ^]      |  ^O      |  ^P      |                               #
 #--------------------------------------<>--------------------------------------#
-# 
-# ANSI Bold, Dim, Italic, Underline, Inverse, Striketrough
+#                                                                              #
+# ANSI Bold, Dim, Italic, Underline, Inverse, Striketrough                     #
 #--------------------------------------::--------------------------------------#
 ansi_bold_o = [1m
 ansi_bold_c = [22m
@@ -142,8 +142,8 @@ ansi_hidden_c = [28m
 ansi_strike_o = [9m
 ansi_strike_c = [29m
 #--------------------------------------::--------------------------------------#
-#
-# ANSI 8 colors. We don't need BRIGHT.
+#                                                                              #
+# ANSI 8 colors. We don't need BRIGHT.                                         #
 #--------------------------------------::--------------------------------------#
 ansi_C0Black_Fg = [30
 ansi_C0Black_Bg = [40
@@ -164,23 +164,23 @@ ansi_C7White_Bg = [47
 ansi_CDefault_Fg = [39
 ansi_CDefault_Fg = [49
 #--------------------------------------::--------------------------------------#
-#
-# ANSI reset all previous attributes.
+#                                                                              #
+# ANSI reset all previous attributes.                                          #
 #--------------------------------------::--------------------------------------#
 ansi_Rs = [0m
-# 
+#                                                                              
 #--------------------------------------<>--------------------------------------#
-#</ansi>
-#
+#</ansi>                                                                      
+#                                                                              
 #--------------------------------------<>--------------------------------------#
-#
-# ESC/P2 Escape codes for formatting, equivalent to ANSI.
-# List uses embedded control characters.
+#                                                                              #
+# ESC/P2 Escape codes for formatting, equivalent to ANSI.                      #
+# List uses embedded control characters.                                       #
 #--------------------------------------<>--------------------------------------#
-#
-# Bold, Dim (Outline+Shadow), Italic, Underline, ?Inverse?, Striketrough 
-# Dim (Outline+Shadow) should work with NLQ San Serif on 24/48 pin printers.
-# Not sure about 'escp_inverse'; should work with ESC/POS; IDK about ESC/P2.
+#                                                                              #
+# Bold, Dim (Outline+Shadow), Italic, Underline, ?Inverse?, Striketrough       #
+# Dim (Outline+Shadow) should work with NLQ San Serif on 24/48 pin printers.   #
+# Not sure about 'escp_inverse'; should work with ESC/POS; IDK about ESC/P2.   #
 #--------------------------------------::--------------------------------------#
 escp_bold_o = E
 escp_bold_c = F
@@ -199,8 +199,8 @@ escp_hidden_c =
 escp_strike_o = (-32
 escp_strike_c = (-30
 #--------------------------------------::--------------------------------------#
-#
-# ESC/P2 colors (VGA pallete). For real printer use just r(number_from_varName)
+#                                                                              #
+# ESC/P2 colors (VGA pallete). For real printer use just r(number_from_varName)#
 #--------------------------------------::--------------------------------------#
 escp_C0Black_Fg = r0|r
 escp_C0Black_Bg = r|0r
@@ -221,11 +221,11 @@ escp_C7White_Bg = r|16777215r
 escp_CDefault_Fg = rr
 escp_CDefault_Bg = rr
 #--------------------------------------::--------------------------------------#
-#
-# ESC/P2 initialize printer.
+#                                                                              #
+# ESC/P2 initialize printer.                                                   #
 #--------------------------------------::--------------------------------------#
 escp_Rs = @
-# 
+#                                                                              
 #--------------------------------------<>--------------------------------------#
 #</escp>
 .
