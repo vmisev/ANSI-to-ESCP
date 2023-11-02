@@ -3,7 +3,7 @@
 # List uses '\e' only for readability, feel free to swap it with '\033' or '\x1b'.
 # All '\' prefixed numbers are octal 3 digit.
 #
-# Work in progress, mistakes are guarantied :D
+# Work in progres, mistakse are guaranteid :D
 #--------------------------------------<>--------------------------------------#
 # 
 # ANSI Bold, Dim, Italic, Underline, Inverse, Striketrough
@@ -65,7 +65,7 @@ ansi_Rs = \e[0m
 #--------------------------------------<>--------------------------------------#
 #
 # Bold, Dim (Outline+Shadow), Italic, Underline, ?Inverse?, Striketrough 
-# Dim (Outline+Shadow) should work w NLQ San Serif on 24/48 pin printers.
+# Dim (Outline+Shadow) should work with NLQ San Serif on 24/48 pin printers.
 # Not sure about 'escp_inverse', should work with ESC/POS; IDK about ESC/P2.
 #--------------------------------------::--------------------------------------#
 escp_bold_o = \eE
@@ -86,7 +86,7 @@ escp_strike_o = \e(-32
 escp_strike_c = \e(-30
 #--------------------------------------::--------------------------------------#
 #
-# ESC/P2 colors. For real printer use just \er(number_from_varName)
+# ESC/P2 colors (VGA pallete). For real printer use just r(number_from_varName)
 #--------------------------------------::--------------------------------------#
 escp_C0Black_Fg = \er\0170|\er\020
 escp_C0Black_Bg = \er\017|0\er\020
@@ -179,7 +179,7 @@ ansi_Rs = [0m
 #--------------------------------------<>--------------------------------------#
 #
 # Bold, Dim (Outline+Shadow), Italic, Underline, ?Inverse?, Striketrough 
-# Dim (Outline+Shadow) should work w NLQ San Serif on 24/48 pin printers.
+# Dim (Outline+Shadow) should work with NLQ San Serif on 24/48 pin printers.
 # Not sure about 'escp_inverse'; should work with ESC/POS; IDK about ESC/P2.
 #--------------------------------------::--------------------------------------#
 escp_bold_o = E
