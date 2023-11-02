@@ -26,28 +26,29 @@ ansi_hidden_o = \e[8m
 ansi_hidden_c = \e[28m
 ansi_strike_o = \e[9m
 ansi_strike_c = \e[29m
+ansi_Rs = \e[0m
 #--------------------------------------::--------------------------------------#
 #                                                                              #
 # ANSI 8 colors. We don't need BRIGHT.                                         #
 #--------------------------------------::--------------------------------------#
-ansi_C0Black_Fg = \e[30
-ansi_C0Black_Bg = \e[40
-ansi_C1Red_Fg = \e[31
-ansi_C1Red_Bg = \e[41
-ansi_C2Green_Fg = \e[32
-ansi_C2Green_Bg = \e[42
-ansi_C3Yellow_Fg = \e[33
-ansi_C3Yellow_Fg = \e[43
-ansi_C4Blue_Fg = \e[34
-ansi_C4Blue_Bg = \e[44
-ansi_C5Magenta_Fg = \e[35
-ansi_C5Magenta_Fg = \e[45
-ansi_C6Cyan_Fg = \e[36
-ansi_C6Cyan_Fg = \e[46
-ansi_C7White_Fg = \e[37
-ansi_C7White_Bg = \e[47
-ansi_CDefault_Fg = \e[39
-ansi_CDefault_Fg = \e[49
+ansi_C0Black_Fg = \e[30m
+ansi_C0Black_Bg = \e[40m
+ansi_C1Red_Fg = \e[31m
+ansi_C1Red_Bg = \e[41m
+ansi_C2Green_Fg = \e[32m
+ansi_C2Green_Bg = \e[42m
+ansi_C3Yellow_Fg = \e[33m
+ansi_C3Yellow_Bg = \e[43m
+ansi_C4Blue_Fg = \e[34m
+ansi_C4Blue_Bg = \e[44m
+ansi_C5Magenta_Fg = \e[35m
+ansi_C5Magenta_Bg = \e[45m
+ansi_C6Cyan_Fg = \e[36m
+ansi_C6Cyan_Bg = \e[46m
+ansi_C7White_Fg = \e[37m
+ansi_C7White_Bg = \e[47m
+ansi_CDefault_Fg = \e[39m
+ansi_CDefault_Bg = \e[49m
 #--------------------------------------::--------------------------------------#
 #                                                                              #
 # ANSI reset all previous attributes.                                          #
@@ -70,39 +71,36 @@ ansi_Rs = \e[0m
 #--------------------------------------::--------------------------------------#
 escp_bold_o = \eE
 escp_bold_c = \eF
-escp_dim_o = \eq3
-escp_dim_c= \eq1
 escp_italic_o = \e4
 escp_italic_c = \e5
 escp_underline_o = \e-1
 escp_underline_c = \e-0
-escp_blink_o =
-escp_blink_c =
-escp_inverse_o = \035B1
-escp_inverse_c = \035B0
-escp_hidden_o =
-escp_hidden_c =
-escp_strike_o = \e(-32
-escp_strike_c = \e(-30
+#escp_dim_o = \eq3
+#escp_dim_c = \eq1
+#escp_inverse_o = \035B1' 
+#escp_inverse_c = \035B0
+#escp_strike_o = \e(-32
+#escp_strike_c = \e(-30
 #--------------------------------------::--------------------------------------#
 #                                                                              #
-# ESC/P2 colors (VGA pallete). For real printer use just r(number_from_varName)#
+# ESC/P2 colors (VGA pallete). 
+# For real printer just use ^[r(number_from_varName)                          #
 #--------------------------------------::--------------------------------------#
-escp_C0Black_Fg = \er\0170|\er\020
+escp_C0Black_Fg = \er\0170\er\020
 escp_C0Black_Bg = \er\017|0\er\020
-escp_C1Magenta_Fg = \er\01711141888|\er\020
-escp_C1Magenta_Fg = \er\017|11141888\er\020
-escp_C2Cyan_Fg = \er\01711184641|\er\020
+escp_C1Magenta_Fg = \er\01711141290\er\020
+escp_C1Magenta_Bg = \er\017|11141290\er\020
+escp_C2Cyan_Fg = \er\01711184641\er\020
 escp_C2Cyan_Bg = \er\017|11184641\er\020
-escp_C3Blue_Fg = \er\01711141719|\er\020
-escp_C3Blue_Bg = \er\017|11141719\er\020
-escp_C4Yellow_Fg = \er\017416714|\er\020
-escp_C4Yellow_Fg = \er\017|416714\er\020
-escp_C5Red_Fg = \er\017358372|\er\020
-escp_C5Red_Bg = \er\017|358372\er\020
-escp_C6Green_Fg = \er\017401125|\er\020
-escp_C6Green_Bg = \er\017|401125\er\020
-escp_C7White_Fg = \er\01716777215|\er\020
+escp_C3Blue_Fg = \er\01711141120\er\020
+escp_C3Blue_Bg = \er\017|11141120\er\020
+escp_C4Yellow_Fg = \er\01759110\er\020
+escp_C4Yellow_Bg = \er\017|59110\er\020
+escp_C5Red_Fg = \er\017170\er\020
+escp_C5Red_Bg = \er\017|170\er\020
+escp_C6Green_Fg = \er\01743520\er\020
+escp_C6Green_Bg = \er\017|43520\er\020
+escp_C7White_Fg = \er\01716777215\er\020
 escp_C7White_Bg = \er\017|16777215\er\020
 escp_CDefault_Fg = \er\017\er\020
 escp_CDefault_Bg = \er\017\er\020
@@ -127,7 +125,7 @@ ansi_bold_o = [1m
 ansi_bold_c = [22m
 ansi_dim_o = [2m
 ansi_dim_c = [22m
-ansi_italic _o = [3m
+ansi_italic_o = [3m
 ansi_italic_c = [23m
 ansi_underline_o = [4m
 ansi_underline_c = [24m
@@ -145,24 +143,24 @@ ansi_strike_c = [29m
 #                                                                              #
 # ANSI 8 colors. We don't need BRIGHT.                                         #
 #--------------------------------------::--------------------------------------#
-ansi_C0Black_Fg = [30
-ansi_C0Black_Bg = [40
-ansi_C1Red_Fg = [31
-ansi_C1Red_Bg = [41
-ansi_C2Green_Fg = [32
-ansi_C2Green_Bg = [42
-ansi_C3Yellow_Fg = [33
-ansi_C3Yellow_Fg = [43
-ansi_C4Blue_Fg = [34
-ansi_C4Blue_Bg = [44
-ansi_C5Magenta_Fg = [35
-ansi_C5Magenta_Fg = [45
-ansi_C6Cyan_Fg = [36
-ansi_C6Cyan_Fg = [46
-ansi_C7White_Fg = [37
-ansi_C7White_Bg = [47
-ansi_CDefault_Fg = [39
-ansi_CDefault_Fg = [49
+ansi_C0Black_Fg = [30m
+ansi_C0Black_Bg = [40m
+ansi_C1Red_Fg = [31m
+ansi_C1Red_Bg = [41m
+ansi_C2Green_Fg = [32m
+ansi_C2Green_Bg = [42m
+ansi_C3Yellow_Fg = [33m
+ansi_C3Yellow_Bg = [43m
+ansi_C4Blue_Fg = [34m
+ansi_C4Blue_Bg = [44m
+ansi_C5Magenta_Fg = [35m
+ansi_C5Magenta_Bg = [45m
+ansi_C6Cyan_Fg = [36m
+ansi_C6Cyan_Bg = [46m
+ansi_C7White_Fg = [37m
+ansi_C7White_Bg = [47m
+ansi_CDefault_Fg = [39m
+ansi_CDefault_Bg = [49m
 #--------------------------------------::--------------------------------------#
 #                                                                              #
 # ANSI reset all previous attributes.                                          #
@@ -184,39 +182,35 @@ ansi_Rs = [0m
 #--------------------------------------::--------------------------------------#
 escp_bold_o = E
 escp_bold_c = F
-escp_dim_o = q3
-escp_dim_c = q1
 escp_italic_o = 4
 escp_italic_c = 5
 escp_underline_o = -1
 escp_underline_c = -0
-escp_blink_o =
-escp_blink_c =
-escp_inverse_o = B1
-escp_inverse_c = B0
-escp_hidden_o =
-escp_hidden_c =
-escp_strike_o = (-32
-escp_strike_c = (-30
+#escp_dim_o = q3
+#escp_dim_c = q1
+#escp_inverse_o = B1
+#escp_inverse_c = B0
+#escp_strike_o = (-32
+#escp_strike_c = (-30
 #--------------------------------------::--------------------------------------#
 #                                                                              #
 # ESC/P2 colors (VGA pallete). For real printer use just r(number_from_varName)#
 #--------------------------------------::--------------------------------------#
-escp_C0Black_Fg = r0|r
+scp_C0Black_Fg = r0r
 escp_C0Black_Bg = r|0r
-escp_C1Magenta_Fg = r11141888|r
-escp_C1Magenta_Fg = r|11141888r
-escp_C2Cyan_Fg = r11184641|r
+escp_C1Magenta_Fg = r11141290r
+escp_C1Magenta_Bg = r|11141290r
+escp_C2Cyan_Fg = r11184641r
 escp_C2Cyan_Bg = r|11184641r
-escp_C3Blue_Fg = r11141719|r
-escp_C3Blue_Bg = r|11141719r
-escp_C4Yellow_Fg = r416714|r
-escp_C4Yellow_Fg = r|416714r
-escp_C5Red_Fg = r358372|r
-escp_C5Red_Bg = r|358372r
-escp_C6Green_Fg = r401125|r
-escp_C6Green_Bg = r|401125r
-escp_C7White_Fg = r16777215|r
+escp_C3Blue_Fg = r11141120r
+escp_C3Blue_Bg = r|11141120r
+escp_C4Yellow_Fg = r59110r
+escp_C4Yellow_Bg = r|59110r
+escp_C5Red_Fg = r170r
+escp_C5Red_Bg = r|170r
+escp_C6Green_Fg = r43520r
+escp_C6Green_Bg = r|43520r
+escp_C7White_Fg = r16777215r
 escp_C7White_Bg = r|16777215r
 escp_CDefault_Fg = rr
 escp_CDefault_Bg = rr
@@ -228,4 +222,3 @@ escp_Rs = @
 #                                                                              
 #--------------------------------------<>--------------------------------------#
 #</escp>
-.
