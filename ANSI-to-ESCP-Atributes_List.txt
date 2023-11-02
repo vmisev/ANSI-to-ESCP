@@ -11,8 +11,8 @@
 ansi_bold_o = \e[1m
 ansi_bold_c =\e[22m
 ansi_dim_o = \e[2m
-ansi_dim_c =\e[22m
-ansi_italic _o = \e[3m
+ansi_dim_c = \e[22m
+ansi_italic_o = \e[3m
 ansi_italic_c = \e[23m
 ansi_underline_o = \e[4m
 ansi_underline_c = \e[24m
@@ -24,7 +24,7 @@ ansi_inverse_o = \e[7m
 ansi_inverse_c = \e[27m
 ansi_hidden_o = \e[8m
 ansi_hidden_c = \e[28m
-ansi_strike_o =  \e[9m
+ansi_strike_o = \e[9m
 ansi_strike_c = \e[29m
 #--------------------------------------::--------------------------------------#
 #
@@ -61,7 +61,7 @@ ansi_Rs = \e[0m
 #
 # ESC/P2 Escape codes for formatting, equivalent to ANSI.
 # List uses '\e' only for readability, feel free to swap it with '\033' or '\x1b'.
-# All '\' prefixed numbers are octal 3 digit.  
+# All '\' prefixed numbers are octal 3 digit.
 #--------------------------------------<>--------------------------------------#
 #
 # Bold, Dim (Outline+Shadow), Italic, Underline, ?Inverse?, Striketrough 
@@ -111,8 +111,8 @@ escp_CDefault_Bg = \er\017\er\020
 # ESC/P2 initialize printer.
 #--------------------------------------::--------------------------------------#
 escp_Rs=\e@
-# 
-#--------------------------------------<>--------------------------------------# 
+#
+#--------------------------------------<>--------------------------------------#
 #</escp>
 #
 #--------------------------------------<>--------------------------------------#
@@ -139,7 +139,7 @@ ansi_inverse_o = [7m
 ansi_inverse_c = [27m
 ansi_hidden_o = [8m
 ansi_hidden_c = [28m
-ansi_strike_o =  [9m
+ansi_strike_o = [9m
 ansi_strike_c = [29m
 #--------------------------------------::--------------------------------------#
 #
