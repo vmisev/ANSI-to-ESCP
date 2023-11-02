@@ -196,7 +196,7 @@ escp_underline_c = -0
 #                                                                              #
 # ESC/P2 colors (VGA pallete). For real printer use just r(number_from_varName)#
 #--------------------------------------::--------------------------------------#
-scp_C0Black_Fg = r0r
+escp_C0Black_Fg = r0r
 escp_C0Black_Bg = r|0r
 escp_C1Magenta_Fg = r11141290r
 escp_C1Magenta_Bg = r|11141290r
