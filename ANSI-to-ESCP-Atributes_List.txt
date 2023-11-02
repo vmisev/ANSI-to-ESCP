@@ -88,20 +88,20 @@ escp_strike_c = \e(-30
 #
 # ESC/P2 colors. For real printer use just \er(number_from_varName)
 #--------------------------------------::--------------------------------------#
-escp_C0black_Fg = \er\0170|\er\020
-escp_C0black_Bg = \er\017|0\er\020
-escp_C1red_Fg = \er\017255|\er\020
-escp_C1red_Bg = \er\017|255\er\020
-escp_C2Green_Fg = \er\01765280|\er\020
-escp_C2Green_Bg = \er^|O65280\er\020
-escp_C3Yellow_Fg = \er\01765535|\er\020
-escp_C3Yellow_Fg = \er\017|65535\er\020
-escp_C4Blue_Fg = \er\01716711680|\er\020
-escp_C4Blue_Bg = \er\017|16711680\er\020
-escp_C5Magenta_Fg = \er\01716712533|\er\020
-escp_C5Magenta_Fg = \er\017|16712533\er\020
-escp_C6Cyan_Fg = \er\01716776961|\er\020
-escp_C6Cyan_Bg = \er\017|16776961\er\020
+escp_C0Black_Fg = \er\0170|\er\020
+escp_C0Black_Bg = \er\017|0\er\020
+escp_C1Magenta_Fg = \er\01711141888|\er\020
+escp_C1Magenta_Fg = \er\017|11141888\er\020
+escp_C2Cyan_Fg = \er\01711184641|\er\020
+escp_C2Cyan_Bg = \er\017|11184641\er\020
+escp_C3Blue_Fg = \er\01711141719|\er\020
+escp_C3Blue_Bg = \er\017|11141719\er\020
+escp_C4Yellow_Fg = \er\017416714|\er\020
+escp_C4Yellow_Fg = \er\017|416714\er\020
+escp_C5Red_Fg = \er\017358372|\er\020
+escp_C5Red_Bg = \er\017|358372\er\020
+escp_C6Green_Fg = \er\017401125|\er\020
+escp_C6Green_Bg = \er\017|401125\er\020
 escp_C7White_Fg = \er\01716777215|\er\020
 escp_C7White_Bg = \er\017|16777215\er\020
 escp_CDefault_Fg = \er\017\er\020
@@ -145,10 +145,10 @@ ansi_strike_c = [29m
 #
 # ANSI 8 colors. We don't need BRIGHT.
 #--------------------------------------::--------------------------------------#
-ansi_C0black_Fg = [30
-ansi_C0black_Bg = [40
-ansi_C1red_Fg = [31
-ansi_C1red_Bg = [41
+ansi_C0Black_Fg = [30
+ansi_C0Black_Bg = [40
+ansi_C1Red_Fg = [31
+ansi_C1Red_Bg = [41
 ansi_C2Green_Fg = [32
 ansi_C2Green_Bg = [42
 ansi_C3Yellow_Fg = [33
@@ -200,22 +200,22 @@ escp_strike_o = (-32
 escp_strike_c = (-30
 #--------------------------------------::--------------------------------------#
 #
-# ESC/P2 colors. For real printer use just r(number_from_varName)
+# ESC/P2 colors (VGA pallete). For real printer use just r(number_from_varName)
 #--------------------------------------::--------------------------------------#
-escp_C0black_Fg = r0|r
-escp_C0black_Bg = r|0r
-escp_C1red_Fg = r255|r
-escp_C1red_Bg = r|255r
-escp_C2Green_Fg = r65280|r
-escp_C2Green_Bg = r|O65280r
-escp_C3Yellow_Fg = r65535|r
-escp_C3Yellow_Fg = r|65535r
-escp_C4Blue_Fg = r16711680|r
-escp_C4Blue_Bg = r|16711680r
-escp_C5Magenta_Fg = r16712533|r
-escp_C5Magenta_Fg = r|16712533r
-escp_C6Cyan_Fg = r16776961|r
-escp_C6Cyan_Bg = r|16776961r
+escp_C0Black_Fg = r0|r
+escp_C0Black_Bg = r|0r
+escp_C1Magenta_Fg = r11141888|r
+escp_C1Magenta_Fg = r|11141888r
+escp_C2Cyan_Fg = r11184641|r
+escp_C2Cyan_Bg = r|11184641r
+escp_C3Blue_Fg = r11141719|r
+escp_C3Blue_Bg = r|11141719r
+escp_C4Yellow_Fg = r416714|r
+escp_C4Yellow_Fg = r|416714r
+escp_C5Red_Fg = r358372|r
+escp_C5Red_Bg = r|358372r
+escp_C6Green_Fg = r401125|r
+escp_C6Green_Bg = r|401125r
 escp_C7White_Fg = r16777215|r
 escp_C7White_Bg = r|16777215r
 escp_CDefault_Fg = rr
