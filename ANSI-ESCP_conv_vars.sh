@@ -202,9 +202,9 @@ echo $awb$akf' 0 Black '$RES$arf' 1 Red '$agf' 2 Green'$ayf' 3 Yellow '$abf' 4 B
 }
 #
 ESCPtest () {
-echo '\n| Normal text | '$ebdo'Bold'$ebdc' |  '$eito'Italic'$eitc' | '$eulo'Underline'$eulc' | '
-echo '| Normal text |  '$ebdo$eito'Bold Italic'$eitc$ebdc'  |  '$ebdo$eito$eulo'Bold Italic Underline'$eulc$eitc$ebdc'  |  '$eito$eulo'Italic Underline  |'$eitc$eulc
-echo $ekf' 0 Black '$erf' 1 Red '$egf' 2 Green'$eyf' 3 Yellow '$ebf' 4 Blue '$emf' 5 Magenta '$ecf' 6 Cyan '$ewf' 7 White \n\n'$ewc'.'
+echo '\n| Normal text | '$ebdo'Bold'$ecla' |  '$eito'Italic'$ecla' | '$eulo'Underline'$ecla' | '
+echo '| Normal text |  '$ebdo$eito'Bold Italic'$ecla'  |  '$ebdo$eito$eulo'Bold Italic Underline'$ecla'  |  '$eito$eulo'Italic Underline  |'$ecla
+echo $ekf' 0 Black '$erf' 1 Red '$egf' 2 Green'$eyf' 3 Yellow '$ebf' 4 Blue '$emf' 5 Magenta '$ecf' 6 Cyan '$ewf' 7 White \n\n'$ewc$ecla'.'
 }
 #
 #ANSItest
