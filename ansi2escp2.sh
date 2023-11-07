@@ -9,13 +9,40 @@ t 9
 # Remove leading/implied zeroes
 s/\(\x1b\[\)0\([^m]\{0,\}m\)/\1\2/g
 
+# Not supported in ESC/P2, so removed
+#s/\x1b\[[5|25|6|26|8|28]m//g # Slow/Fast Blink, Hidden
+# v2 with Striketrough and Dim removed as well
+s/\x1b\[[2|5|25|6|26|8|28|9|29]m//g # Dim, Slow/Fast Blink, Hidden, Striketrough
+
 # Translate ANSI to ESC-P2
-s/\x1b\[1m/\x1bE/g
-s/\x1b\[22m/\x1bF/g
-s/\x1b\[3m/\x1b4/g
-s/\x1b\[23m/\x1b5/g
-s/\x1b\[4m/\x1b\-1/g
-s/\x1b\[24m/\x1b\-0/g
+s/\x1b\[1m/\x1bE/g # Bold on
+s/\x1b\[22m/\x1bF/g # Bold off
+s/\x1b\[3m/\x1b4/g # Italic on
+s/\x1b\[23m/\x1b5/g # Italic off
+s/\x1b\[4m/\x1b\-1/g # Underline on
+s/\x1b\[24m/\x1b\-0/g # Underline off
+#
+# Rarely used Striketrough is not supported by Printfil
+# but I think codes sould work on real printer
+#s/\x1b\[9m/\x1b(-32/g' # Striketrough on
+#s/\x1b\[29m/\x1b(-30/g # Striketrough off
+# We could probably also use ESC/P NLQ outline for ANSI Dim
+# but, as well, not supported by Printfil
+#s/\x1b\[2m/\x1bq3/g
+#s/\x1b\[22m/\x1bq/g
+
+# We dont have inverse, so we are using: 
+# Inverse ver 1: bold italic unerline for stand out
+#s/\(\x1b\)\[7m/\1E\14\1\-1/g
+#s/\(\x1b\)\[27m/\1F\15\1\-0/g
+#
+# Inverse ver 2: yellow fg on blue bg  
+s/\x1b\[7m/\x1br\x0F59110|11141120\x1br\x10
+s/\(\x1b\)\[27m/\1r\x0f\1r\x10/g
+#
+# Inverse ver 3: remove
+#s/\x1b\[7m//g
+#s/\x1b\[27m//g
 
 # Colors
 s/\x1b\[30m/\x1br\x0F0\x1br\x10/g # black fg
