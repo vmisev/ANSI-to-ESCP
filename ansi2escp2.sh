@@ -33,7 +33,7 @@ s/\x1b\[24m/\x1b\-0/g # Underline off
 #s/\(\x1b\)\[27m/\1F\15\1\-0/g
 #
 # Inverse ver 2: yellow fg on blue bg  
-s/\x1b\[7m/\x1br\x0F59110|11141120\x1br\x10
+s/\x1b\[7m/\x1br\x0F59110\|11141120\x1br\x10/g
 s/\(\x1b\)\[27m/\1r\x0f\1r\x10/g
 #
 # Inverse ver 3: remove
@@ -42,21 +42,21 @@ s/\(\x1b\)\[27m/\1r\x0f\1r\x10/g
 
 # Colors
 s/\x1b\[30m/\x1br\x0F0\x1br\x10/g # black fg
-s/\x1b\[40m/\x1br\x0F|0\x1br\x10/g # black bg
+s/\x1b\[40m/\x1br\x0F\|0\x1br\x10/g # black bg
 s/\x1b\[31m/\x1br\x0F170\x1br\x10/g # red fg
-s/\x1b\[41m/\x1br\x0F|170\x1br\x10/g # red bg
+s/\x1b\[41m/\x1br\x0F\|170\x1br\x10/g # red bg
 s/\x1b\[32m/\x1br\x0F43520\x1br\x10/g # green fg
-s/\x1b\[42m/\x1br\x0F|43520\x1br\x10/g # green bg
+s/\x1b\[42m/\x1br\x0F\|43520\x1br\x10/g # green bg
 s/\x1b\[33m/\x1br\x0F59110\x1br\x10/g # yellow fg
-s/\x1b\[43m/\x1br\x0F|59110\x1br\x10/g # yellow bg 
+s/\x1b\[43m/\x1br\x0F\|59110\x1br\x10/g # yellow bg 
 s/\x1b\[34m/\x1br\x0F11141120\x1br\x10/g # blue fg
-s/\x1b\[34m/\x1br\x0F|11141120\x1br\x10/g # blue bg
+s/\x1b\[34m/\x1br\x0F\|11141120\x1br\x10/g # blue bg
 s/\x1b\[35m/\x1br\x0F11141290\x1br\x10/g # magenta fg
-s/\x1b\[45m/\x1br\x0F|11141290\x1br\x10/g # magenta bg 
+s/\x1b\[45m/\x1br\x0F\|11141290\x1br\x10/g # magenta bg 
 s/\x1b\[36m/\x1br\x0F11184641\x1br\x10/g # cyan fg 
-s/\x1b\[46m/\x1br\x0F|11184641\x1br\x10/g # cyan bg
+s/\x1b\[46m/\x1br\x0F\|11184641\x1br\x10/g # cyan bg
 s/\x1b\[39m/\x1br\x0F\x1br\x10/g # default fg 
-s/\x1b\[49m/\x1br\x0F|\x1br\x10/g # default bg
+s/\x1b\[49m/\x1br\x0F\|\x1br\x10/g # default bg
 
 # Attribute Reset
 s/\(\x1b\)\[m/\1F\15\1-0\1r\x0f\1r\x10/g
@@ -79,5 +79,5 @@ ANSI2ESCP2=$( cat <&9 )
 #    cat "$@"
 #fi | sed -e "$ANSI2ESCP2"
 while read line ;do 
-sed -e "$ANSI2ESCP2" $1
+sed -e "$ANSI2ESCP2"  > ~/ESCP.prn
 done
