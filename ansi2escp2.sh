@@ -26,10 +26,6 @@ s/\x1b\[24m/\x1b\-0/g # Underline off
 # but I think codes sould work on real printer
 #s/\x1b\[9m/\x1b(-32/g' # Striketrough on
 #s/\x1b\[29m/\x1b(-30/g # Striketrough off
-# We could probably also use ESC/P NLQ outline for ANSI Dim
-# but, as well, not supported by Printfil
-#s/\x1b\[2m/\x1bq3/g
-#s/\x1b\[22m/\x1bq/g
 
 # We don't have inverse, so we are using: 
 # Inverse ver 1: bold italic underline for stand out
