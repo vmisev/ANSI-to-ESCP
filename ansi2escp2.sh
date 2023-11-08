@@ -69,6 +69,10 @@ t 9
     s/\x1b\[39m/\x1br\x0F\x1br\x10/g # default fg 
     s/\x1b\[49m/\x1br\x0F\|\x1br\x10/g # default bg
 
+# Remove ANSI 256 and RGB colors
+    s/\x1b\[38*\x1b[^\x1b]//g
+    s/\x1b\[48*\x1b[^\x1b]//g
+
 # Attribute Reset
     s/\(\x1b\)\[m/\1F\15\1-0\1r\x0f\1r\x10/g
 
