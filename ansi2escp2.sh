@@ -92,5 +92,5 @@ ANSI2ESCP2=$( cat <&9 )
 #fi | sed -e "$ANSI2ESCP2"
 
 while read line ;do 
-    sed -e "$ANSI2ESCP2"  > ~/ESCP.prn
+    sed -e "$ANSI2ESCP2" | iconv -f UTF8 -t 850//TRANSLIT > ~/ESCP.prn
 done
